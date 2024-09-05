@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
-export const StyledTabs = styled.div`
+export const StyledCardBody = styled.section`
+  width: 100%;
   display: flex;
   flex-direction: column;
-  section {
-    margin: 0;
-  }
+  padding: 1.25rem;
 `;

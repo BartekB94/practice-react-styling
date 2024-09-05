@@ -1,7 +1,8 @@
 import React from 'react';
 import Alert from "./../src/components/Alert";
 import { Row, Col, Alert as RBAlert } from "react-bootstrap";
-import { primary, secondary } from "../src/components/Alert/alertTheme";
+import themeSettings from "../src/themeSettings";
+import { ThemeProvider } from "styled-components";
 
 const Task01 = () => {
   return (
@@ -12,12 +13,14 @@ const Task01 = () => {
         </RBAlert>
       </Col>
       <Col>
-        <Alert variant={primary}>
-          Uwaga! <em>Styled Components</em> nadchodzi!
-        </Alert>
-        <Alert variant={secondary}>
-          Uwaga! <em>Styled Components</em> nadchodzi!
-        </Alert>
+        <ThemeProvider theme={themeSettings}>
+          <Alert variant={"primary"}>
+            Uwaga! <em>Styled Components</em> nadchodzi!
+          </Alert>
+          <Alert variant={"secondary"}>
+            Uwaga! <em>Styled Components</em> nadchodzi!
+          </Alert>
+        </ThemeProvider>
       </Col>
     </Row>
   );

@@ -4,7 +4,7 @@ import { StyledAlert } from './Alert.styled';
 
 
 const Alert = (props) => {
-  return <StyledAlert theme={props.variant}>{props.children}</StyledAlert>;
+  return <StyledAlert variant={props.variant}>{props.children}</StyledAlert>;
 };
 
 export default Alert;

@@ -1,7 +1,8 @@
 import React from "react";
+import { StyledTab } from "./styles/Tab.styled";
 
-function Tab() {
-  return <div>Tab</div>;
+function Tab(props) {
+  return <StyledTab>{props.name}</StyledTab>;
 }
 
 export default Tab;
